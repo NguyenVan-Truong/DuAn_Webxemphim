@@ -1,0 +1,121 @@
+// App.module.scss
+
+.imageGallery {
+    display: flex;
+    width: 100%;
+    height: 700px;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  
+  .mainImageContainers {
+    position: relative;
+    width: 71.43%; // 5/7 width
+    height: 100%;
+    overflow: hidden;
+    padding: 20px 10px 10px 40px;
+  
+    .mainImageContainer {
+        height: 100%;
+        overflow: hidden;
+
+        .mainImage {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+              transition: transform 0.5s ease;
+        
+            &:hover {
+              transform: scale(1.10); // Phóng to một chút khi hover
+              filter: brightness(1.2); // Làm sáng hơn một chút khi hover
+            }
+    }
+    }
+  
+    .overlay {
+      position: absolute;
+      top: 40%;
+      left: 10%;
+      color: white;
+      text-align: left;
+  
+      .smallText {
+        font-size: 1.2rem;
+        font-style: italic;
+      }
+  
+      h1 {
+        width: 400px;
+        font-size: 3.2rem;
+        margin-top: 20px;
+        line-height: 1.2;
+      }
+  
+      .overlayButton {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.375);
+        }
+      }
+    }
+  }
+  
+  .sideImages {
+    width: 28.57%; // 2/7 width
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 40px 10px 10px;
+  
+    .sideImageContainer {
+      height: 48%;
+      overflow: hidden;
+  
+      .sideImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+  
+        &:hover {
+          transform: scale(1.15); // Phóng to một chút khi hover
+          filter: brightness(0.9);
+        }
+      }
+    }
+  }
+
+.bannerGCH {
+    padding: 80px 25px 10px 25px;
+
+}
+.XemTatCa {
+    width: 160px;
+    height: 40px;
+    background-color: brown;
+    margin-top: 40px;
+    margin-bottom: 50px;
+
+
+    .ButtonXem {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.375);
+      }
+    }
+  }
+  

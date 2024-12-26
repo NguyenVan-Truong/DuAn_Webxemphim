@@ -1,0 +1,213 @@
+// News.module.scss
+.postContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1290px !important;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 600px;
+}
+
+.postSidebar {
+    width: 25%;
+    border-right: 3px solid #bab8b8;
+    padding-right: 35px;
+    align-self: flex-start;
+    box-sizing: border-box;
+    overflow: hidden; /* Ẩn thanh cuộn */
+    overflow-y: scroll; /* Cho phép cuộn dọc */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    height: 550px;
+}
+
+.sidebarTitle {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 20px;
+    border-bottom: 2px solid #666;
+    background: #cfcfcf;
+}
+
+.sidebarList {
+    list-style: none;
+    padding: 20px;
+    background: #eeeded;
+}
+
+.sidebarItem {
+    display: flex;
+    //align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.sidebarImage {
+    width: 80px;
+    height: 60px;
+    margin-right: 10px;
+    object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+}
+.sidebarImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Giữ tỷ lệ ảnh nguyên vẹn */
+}
+
+.postMain {
+    width: 70%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    height: 550px;
+}
+.your-element::-webkit-scrollbar {
+    display: none; /* Safari và Chrome */
+}
+.postCard {
+    display: flex;
+    flex-direction: row; /* Cố định layout theo chiều ngang */
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px; /* Bo góc cho thẻ bài viết */
+    overflow: hidden; /* Giúp bo góc không bị viền ảnh bị vỡ */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ */
+    transition: all 0.3s ease-in-out; /* Thêm hiệu ứng cho hover */
+}
+
+.postCard:hover {
+    transform: translateY(-5px); /* Đưa lên khi hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Tăng độ bóng đổ khi hover */
+}
+
+.postImage {
+    width: 200px; /* Cố định chiều rộng của hình ảnh */
+    height: 130px;
+    object-fit: cover;
+    margin-right: 15px; /* Khoảng cách giữa ảnh và nội dung */
+    border-radius: 5px; /* Bo góc cho ảnh */
+}
+.postImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Giữ tỷ lệ ảnh nguyên vẹn */
+}
+
+.postContent {
+    flex-grow: 1; /* Nội dung chiếm phần còn lại của không gian */
+    padding: 10px; /* Thêm khoảng cách giữa các phần tử */
+    margin-right: 20px;
+    text-align: justify;
+}
+
+.postTitle {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    color: #333; /* Màu sắc tiêu đề */
+}
+
+.postDescription {
+    font-size: 14px;
+    line-height: 1.5;
+    overflow: hidden; /* Cắt bớt phần văn bản nếu quá dài */
+    text-overflow: ellipsis; /* Hiển thị 3 dấu chấm nếu nội dung quá dài */
+    //white-space: nowrap; /* Đảm bảo văn bản không bị xuống dòng */
+    max-width: 100%; /* Đảm bảo độ rộng của phần nội dung không vượt quá chiều rộng của phần ảnh */
+    transition:
+        max-height 0.3s ease-in-out,
+        white-space 0.3s ease-in-out; /* Hiệu ứng khi hover */
+    color: #555; /* Màu sắc nội dung */
+}
+
+.postCard:hover .postDescription {
+    white-space: normal; /* Khi hover, cho phép văn bản xuống dòng */
+    max-height: none; /* Mở rộng chiều cao để hiển thị toàn bộ nội dung */
+}
+
+/* Hiệu ứng hover cho thẻ bài viết */
+.postCard:hover {
+    transform: translateY(-5px); /* Tạo hiệu ứng khi hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ đậm hơn khi hover */
+}
+
+.postCategory {
+    margin-top: 30px;
+}
+
+.categoryTitle {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 20px;
+    border-bottom: 2px solid #666;
+    background: #cfcfcf;
+}
+
+.categoryList {
+    list-style: none;
+    padding: 20px;
+    background: #eeeded;
+}
+
+.categoryItem {
+    display: flex;
+    margin-bottom: 15px;
+    gap: 15px;
+    margin: 20px;
+}
+
+.categoryItem img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.categoryItem .postTitle {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+.postDetail {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.detailImage {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.detailTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.detailMetaDescription {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.detailContent {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.detailUpdatedAt {
+    font-size: 0.9rem;
+    color: #999;
+    text-align: right;
+}

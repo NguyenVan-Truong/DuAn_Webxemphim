@@ -1,0 +1,72 @@
+/* DescriptionProduct.scss */
+
+.description-container {
+    position: relative;
+    width: 100%;
+    min-height: 550px;
+    padding: 10px;
+    border-radius: 0.325rem;
+    box-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.16),
+        0 1px 4px rgba(0, 0, 0, 0.16);
+    max-height: 550px;
+    overflow-y: auto;
+    // cái này để ẩn thanh cuộn trên các trình duyệt
+    scrollbar-width: none;
+    // ẩn trên trên chorme
+    -ms-overflow-style: none;
+}
+
+.description {
+    height: 470px;
+    max-height: auto; /* Chiều cao tối đa khi không mở rộng */
+    overflow: hidden;
+    position: relative;
+    transition:
+        max-height 0.3s ease,
+        opacity 0.3s ease;
+}
+// .expanded {
+//   height: auto; /* Hiển thị toàn bộ nội dung khi mở rộng */
+//   overflow: visible; /* Hiển thị tất cả nội dung khi mở rộng */
+//   mask-image: none; /* Loại bỏ hiệu ứng làm mờ khi mở rộng */
+//   -webkit-mask-image: none; /* Loại bỏ hiệu ứng làm mờ khi mở rộng */
+// }
+
+.description {
+    position: relative;
+    transition: opacity 0.3s ease;
+    margin-top: 10px;
+    mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 50%,
+        rgba(0, 0, 0, 0.2) 100%
+    );
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 50%,
+        rgba(0, 0, 0, 0.2) 100%
+    );
+}
+.description.expanded {
+    height: auto;
+    overflow: visible;
+    mask-image: none; /* Loại bỏ hiệu ứng làm mờ */
+    -webkit-mask-image: none; /* Loại bỏ hiệu ứng làm mờ */
+}
+.description-button {
+    .toggle-button {
+        display: block;
+        cursor: pointer;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    .button_description_show {
+        border-radius: 0.325rem 0.325rem 15px 15px;
+        width: 170px;
+        max-width: 170px;
+    }
+    .button_description_hiden {
+        border-radius: 0.325rem;
+    }
+}

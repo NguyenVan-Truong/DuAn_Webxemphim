@@ -1,0 +1,103 @@
+.imageGallery {
+    display: flex;
+    width: 100%;
+    height: 600px; /* Chiều cao mặc định cho ảnh */
+    justify-content: space-between;
+    margin-top: 40px;
+
+    @media (max-width: 768px) {
+        flex-direction: column; /* Chuyển sang kiểu cột trên màn hình nhỏ */
+        height: auto; /* Cho phép chiều cao tự động để phù hợp với nội dung */
+    }
+}
+
+.mainImageContainers {
+    position: relative;
+    width: 50%; /* Chiếm 50% chiều rộng */
+    height: 100%;
+    overflow: hidden;
+    padding: 20px 10px 50px 40px;
+
+    @media (max-width: 768px) {
+        width: 100%; /* Chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+        padding: 10px; /* Giảm padding cho vừa vặn hơn */
+    }
+
+    .mainImageContainer {
+        height: 100%;
+        overflow: hidden;
+
+        .mainImage {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+
+            &:hover {
+                transform: scale(1.10); /* Phóng to một chút khi hover */
+                filter: brightness(1.2); /* Làm sáng hơn một chút khi hover */
+            }
+        }
+    }
+}
+
+.ImageContainers_1 {
+    position: relative;
+    width: 25%; /* Chiếm 25% chiều rộng */
+    height: 100%;
+    overflow: hidden;
+    padding: 20px 10px 50px 10px;
+
+    @media (max-width: 768px) {
+        width: 100%; /* Chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+        padding: 10px; /* Giảm padding cho vừa vặn hơn */
+    }
+
+    .ImageContainer_1 {
+        height: 100%;
+        overflow: hidden;
+
+        .mainImage {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+
+            &:hover {
+                transform: scale(1.10); /* Phóng to một chút khi hover */
+                filter: brightness(1.2); /* Làm sáng hơn một chút khi hover */
+            }
+        }
+    }
+}
+
+.sideImages {
+    width: 25%; /* Chiếm 25% chiều rộng */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 40px 50px 10px;
+
+    @media (max-width: 768px) {
+        width: 100%; /* Chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+        padding: 10px; /* Giảm padding cho vừa vặn hơn */
+        margin-top: 20px; /* Thêm khoảng cách ở phía trên */
+    }
+
+    .sideImageContainer {
+        height: 48%;
+        overflow: hidden;
+
+        .sideImage {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+
+            &:hover {
+                transform: scale(1.15); /* Phóng to một chút khi hover */
+                filter: brightness(0.9); /* Làm tối đi một chút khi hover */
+            }
+        }
+    }
+}

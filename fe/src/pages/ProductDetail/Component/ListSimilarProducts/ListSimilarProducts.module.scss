@@ -1,0 +1,121 @@
+.slick-slider .slick-list {
+    z-index: 1 !important;
+}
+.listProductss {
+    padding-bottom: 30px;
+}
+
+.listProductsPricing {
+    display: flex;
+    align-items: flex-end !important;
+    margin: 5px 0;
+}
+.listProductsItemMain {
+    position: relative;
+    padding: 15px !important;
+}
+.promotionTags {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 13px;
+    .discountTag,
+    .newTag {
+        margin-left: 0;
+        height: 35px;
+        border-radius: 0;
+        width: 44px;
+        position: relative;
+        background-size: 65% 93%;
+        background-position: 9px 2px;
+        .discountText,
+        .newText {
+            text-align: center;
+            padding: 0 10px;
+            padding-top: 2px;
+            span {
+                font-size: 12px;
+                margin: 0 auto;
+                color: #fff;
+            }
+        }
+    }
+}
+.listProductsItemMain:hover {
+    border: 1px solid #e1e1e1;
+}
+.listProductsImageContainer {
+    position: relative;
+}
+
+.listProductsImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.listProductsImageSecondary {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.listProductsItem:hover .listProductsImagePrimary {
+    opacity: 0;
+}
+
+.listProductsItem:hover .listProductsImageSecondary {
+    opacity: 1;
+}
+.listProductsTitle {
+    font-size: 15px;
+    font-weight: 400 !important;
+}
+
+.listProductsPricing {
+    display: flex;
+    align-items: flex-end !important;
+    margin-top: 5px;
+    font-size: 14px;
+    .listProductsPriceCurrent {
+        margin: 8px 0;
+    }
+    .listProductsPriceOriginal {
+        color: #9f9f9f;
+    }
+}
+
+.sliderProductSimilar {
+    position: relative;
+    z-index: 1;
+}
+
+.NextPrev,
+.BackPrev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    pointer-events: auto;
+    cursor: pointer;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.9s ease-in-out;
+}
+
+.NextPrev {
+    right: 10px;
+}
+
+.BackPrev {
+    left: 10px;
+}
+.sliderProductSimilar:hover {
+    .NextPrev,
+    .BackPrev {
+        opacity: 1;
+        display: block !important;
+    }
+}

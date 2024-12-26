@@ -1,0 +1,186 @@
+// Rating Product
+.rating-container {
+    width: 100%;
+    padding: 10px;
+    border-radius: 0.325rem;
+    box-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.16),
+        0 1px 4px rgba(0, 0, 0, 0.16);
+    margin-top: 10px;
+    margin-bottom: 40px;
+    .rating-header {
+        p {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+            color: #1f2123;
+        }
+    }
+    .rating-divider {
+        border-top: 2px solid rgb(222, 226, 230);
+        margin: 12px 0;
+    }
+}
+// rating-center
+.rating-summary {
+    width: 100%;
+    &-average {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        .rating-average-score {
+            color: rgb(250, 176, 5);
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .average-icon {
+            margin: 0 auto;
+            font-size: 16px;
+            min-width: 70px;
+        }
+    }
+}
+.rating-summary-breakdown {
+    display: flex;
+    flex-wrap: wrap;
+    &-item {
+        padding: 5px 20px;
+        margin: 5px;
+        border: 1px solid rgb(229, 231, 235);
+        border-radius: 0.325rem;
+        align-items: center;
+        gap: 0.35rem !important;
+    }
+}
+
+// ratingbottom
+.rating-details {
+    margin-top: 5px;
+    justify-content: space-between;
+    width: 100%;
+    // .rating-divider-col {
+    //     height: 113px;
+    //     border: 1px solid #e5e7eb;
+    //     margin: 0 10px;
+    // }
+}
+@media (max-width: 600px) {
+    .rating-container {
+        .rating-details {
+            display: flex;
+            flex-direction: column !important;
+            &-average {
+                width: 100%;
+            }
+            &-breakdown {
+                width: 100%;
+                &-item {
+                    width: 100%;
+                    margin: 0 auto;
+                }
+            }
+            .rating-feedback {
+                width: 100%;
+            }
+        }
+        .rating-divider-col {
+            border: 1px solid #e5e7eb;
+            margin: 10px 0;
+            height: 1px; /* Giảm chiều cao của thanh phân cách */
+        }
+    }
+}
+.rating-details-average {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 3.2rem;
+}
+.rating-details-breakdown {
+    width: 60%;
+    font-size: 14px;
+    &-item {
+        align-items: center;
+        .rating-details-progress {
+            width: 60%;
+            max-width: 250px;
+            height: 5px;
+            border-radius: 12px;
+            background-color: #e3e3e3;
+        }
+    }
+}
+.rating-details-breakdown-item {
+    .rating-details-star {
+        display: flex;
+        align-items: center;
+        span {
+            margin-right: 3px;
+        }
+        .icon_rating_start {
+            max-width: 25px;
+        }
+    }
+    .rating-details-count {
+        .rating-details-count-text {
+            font-size: small;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+    }
+}
+.rating-feedback {
+    width: 30%;
+    justify-content: center;
+    p {
+        font-size: 12px;
+        font-weight: 600;
+        text-align: center;
+    }
+    .rating-feedback-button {
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: 5px;
+        font-weight: 600;
+        text-align: left;
+        color: #fff;
+        font-size: 12px;
+    }
+}
+// -------------------Comment
+.product-detail__feedback-section {
+    margin-top: 20px;
+    border-radius: 12px;
+    padding: 10px 20px 0;
+    border: 1px solid hsla(0, 0%, 94%, 0.769);
+    background-color: #f9fafb;
+    box-shadow:
+        0 1px 2px 0 rgba(60, 64, 67, 0.1),
+        0 2px 6px 2px rgba(60, 64, 67, 0.15);
+}
+.feedback-section__input-wrapper {
+    margin: 10px 0;
+    .feedback-section__submit-button {
+        display: flex;
+        justify-content: flex-end;
+        .feedback-button {
+            padding: 0 18px;
+        }
+    }
+}
+.feedback-section__textarea {
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: 1px solid hsla(0, 0%, 94%, 0.769);
+    box-shadow:
+        0 1px 2px 0 rgba(60, 64, 67, 0.1),
+        0 2px 6px 2px rgba(60, 64, 67, 0.15);
+    height: 100px;
+}

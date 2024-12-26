@@ -1,0 +1,117 @@
+// Đặt biến màu sắc và kích thước
+$primary-color: #4CAF50; // Màu chính
+$secondary-color: #ffffff; // Màu nền cho khung
+$hover-color: #f0f0f0; // Màu nền hover
+$text-color: #333; // Màu chữ
+$shadow-color: rgba(0, 0, 0, 0.1); // Màu đổ bóng
+$slide-height: 350px; // Chiều cao cố định cho slide
+
+.list-products-slider {
+    margin: 20px auto; // Căn giữa slider
+    padding: 20px; // Thêm khoảng cách xung quanh slider
+    max-width: 1200px; // Giới hạn chiều rộng tối đa cho slider
+    background-color: $hover-color; // Màu nền cho slider
+
+    .slick-slide {
+        display: flex; // Sử dụng flexbox để căn chỉnh nội dung
+        justify-content: center; // Căn giữa nội dung
+        padding: 10px; // Thêm khoảng cách giữa các slide
+    }
+
+    .imageWrapper {
+        background-color: $secondary-color; // Màu nền cho mỗi slide
+        border-radius: 10px; // Bo góc cho khung chứa
+        box-shadow: 0 4px 12px $shadow-color; // Đổ bóng cho khung
+        overflow: hidden; // Ẩn phần nội dung tràn ra ngoài
+        transition: transform 0.3s ease, box-shadow 0.3s ease; // Hiệu ứng khi hover
+        height: $slide-height; // Thiết lập chiều cao cố định cho slide
+
+        &:hover {
+            transform: scale(1.05); // Phóng to khi hover
+            box-shadow: 0 8px 16px $shadow-color; // Tăng độ đổ bóng khi hover
+        }
+
+        img {
+            width: 100%; // Đảm bảo hình ảnh đầy đủ chiều rộng
+            height: 70%; // Giữ tỉ lệ cho hình ảnh
+            object-fit: cover; // Cắt hình ảnh để giữ tỉ lệ
+            border-bottom: 4px solid $primary-color; // Đường viền dưới cho hình ảnh
+        }
+
+        .textContainer {
+            padding: 20px; // Thêm khoảng cách cho văn bản
+            text-align: center; // Căn giữa văn bản
+            color: $text-color; // Màu chữ
+
+            h3 {
+                font-size: 1.3rem; // Kích thước chữ tiêu đề
+                margin: 10px 0; // Khoảng cách trên và dưới tiêu đề
+                font-weight: 600; // Đậm tiêu đề
+                transition: color 0.3s ease; // Hiệu ứng khi hover
+
+                &:hover {
+                    color: $primary-color; // Thay đổi màu chữ khi hover
+                }
+            }
+
+            p {
+                font-size: 0.95rem; // Kích thước chữ mô tả
+                margin: 5px 0; // Khoảng cách
+                line-height: 1.5; // Tăng khoảng cách dòng
+            }
+        }
+    }
+
+    .arrow-icon {
+        font-size: 28px; // Kích thước biểu tượng mũi tên
+        color: $primary-color; // Màu mũi tên
+        cursor: pointer; // Thay đổi con trỏ khi hover
+        transition: color 0.3s ease; // Hiệu ứng khi hover
+
+        &:hover {
+            color: darken($primary-color, 10%); // Tối màu khi hover
+        }
+    }
+
+    // Responsive styles
+    @media (max-width: 1024px) {
+        .imageWrapper {
+            h3 {
+                font-size: 1.2rem; // Giảm kích thước chữ tiêu đề
+            }
+
+            p {
+                font-size: 0.9rem; // Giảm kích thước chữ mô tả
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .imageWrapper {
+            h3 {
+                font-size: 1.1rem; // Giảm kích thước chữ tiêu đề
+            }
+
+            p {
+                font-size: 0.85rem; // Giảm kích thước chữ mô tả
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .imageWrapper {
+            padding: 15px; // Giảm khoảng cách bên trong cho nhỏ hơn
+            h3 {
+                font-size: 1rem; // Giảm kích thước chữ tiêu đề
+            }
+
+            p {
+                font-size: 0.8rem; // Giảm kích thước chữ mô tả
+            }
+        }
+
+        .arrow-icon {
+            font-size: 24px; // Giảm kích thước biểu tượng mũi tên
+        }
+    }
+}

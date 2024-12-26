@@ -1,0 +1,112 @@
+.showcaseContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;    
+  }
+  
+  .imagesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Đảm bảo khoảng cách đều */
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .imageWrapper {
+    position: relative;
+    width: calc(50% - 20px);  /* Đảm bảo hai hình chiếm 50% màn hình */
+    max-width: 600px;         /* Đặt kích thước tối đa */
+    
+    img {
+      width: 100%;
+      height: 400px;         /* Đặt chiều cao cố định */
+      object-fit: cover;     /* Giữ tỉ lệ hình ảnh và đảm bảo không bị méo */
+    }
+  
+    .textContainer {
+      text-align: center;
+      margin-top: 10px;
+  
+      h3 {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+  
+      p {
+        font-size: 1rem;
+        color: #555;
+      }
+    }
+  }
+  
+  @media (max-width: 1200px) {
+  
+    .textContainer {
+      h3 {
+        font-size: 1.1rem !important;
+      }
+  
+      p {
+        font-size: 1rem !important;
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+  
+    .textContainer {
+      h3 {
+        font-size: 1rem !important;
+      }
+  
+      p {
+        font-size: 0.9rem !important;
+      }
+    }
+  }
+  @media (max-width: 800px) {
+  
+    .textContainer {
+      h3 {
+        font-size: 0.9rem !important;
+      }
+  
+      p {
+        font-size: 0.8rem !important;
+      }
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .showcaseContainer {
+      margin: 10px;
+    }
+  
+    .imagesContainer {
+      flex-direction: column;  /* Sắp xếp theo chiều dọc khi màn hình nhỏ */
+      align-items: center;
+      margin-bottom: 40px;
+    }
+  
+    .imageWrapper {
+      width: 100%;  /* Hình ảnh chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+      margin-bottom: 20px;
+    }
+  
+    img {
+      border-radius: 0;  /* Loại bỏ bo góc */
+      height: 300px;     /* Đặt chiều cao cố định nhưng thấp hơn để phù hợp với màn hình nhỏ */
+    }
+  
+    .textContainer {
+      h3 {
+        font-size: 0.8rem !important;
+      }
+  
+      p {
+        font-size: 0.7rem !important;
+      }
+    }
+  }
+  

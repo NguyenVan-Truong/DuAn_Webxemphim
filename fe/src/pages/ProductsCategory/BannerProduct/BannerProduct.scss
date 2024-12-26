@@ -1,0 +1,14 @@
+
+@media (max-width: 1015px) {
+    .product-banner__container {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        .title {
+            text-align: center;
+        }
+        .product-banner__breadcrumb {
+            justify-content: center;
+        }
+    }
+}

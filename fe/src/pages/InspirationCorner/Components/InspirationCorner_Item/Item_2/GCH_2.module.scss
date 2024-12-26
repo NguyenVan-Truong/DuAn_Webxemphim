@@ -1,0 +1,99 @@
+.headerImage {
+    img {
+        width: 100%;
+        height: 400px; /* Chiều cao cố định cho ảnh */
+        overflow: hidden;
+        object-fit: cover; /* Để giữ tỷ lệ hình ảnh */
+    }
+
+    @media (max-width: 768px) {
+        img {
+            height: 300px; /* Chiều cao nhỏ hơn cho màn hình nhỏ */
+        }
+    }
+}
+
+.content {
+    padding: 50px 150px; /* Padding cho nội dung */
+    font-size: 14px;
+
+    @media (max-width: 768px) {
+        padding: 20px; /* Giảm padding cho màn hình nhỏ */
+        font-size: 12px; /* Giảm kích thước chữ cho màn hình nhỏ */
+    }
+}
+
+.flexContainer,
+.flexContainer1,
+.flexContainer2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+
+    @media (max-width: 768px) {
+        flex-direction: column; /* Chuyển thành cột trên màn hình nhỏ */
+        align-items: center; /* Căn giữa nội dung */
+    }
+}
+
+.flexItemContent,
+.flexItemContent1,
+.flexItemContent2 {
+    flex: 1; /* Để nội dung chiếm không gian */
+    max-width: 600px; /* Giới hạn chiều rộng cho flexItemContent và flexItemContent1 */
+    margin-right: 20px; /* Khoảng cách giữa nội dung và ảnh */
+    padding-top: 10%;
+    text-align: justify;
+
+    h2 {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: 768px) {
+        max-width: 100%; /* Chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+        margin-right: 0; /* Không có khoảng cách bên phải trên màn hình nhỏ */
+        padding-top: 5%; /* Giảm padding trên màn hình nhỏ */
+    }
+}
+
+.flexItemContent2 {
+    max-width: 400px; /* Giới hạn chiều rộng cho flexItemContent2 */
+
+    @media (max-width: 768px) {
+        max-width: 100%; /* Chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+    }
+}
+
+.flexItemImage,
+.flexItemImage1,
+.flexItemImage2 {
+    max-width: 500px; /* Giới hạn chiều rộng cho ảnh */
+    height: auto; /* Giữ tỷ lệ ảnh */
+
+    @media (max-width: 768px) {
+        max-width: 100%; /* Chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+    }
+}
+
+.flexItemImage2 {
+    padding-top: 11%; /* Giữ padding cho flexItemImage2 */
+    max-width: 800px; /* Giới hạn chiều rộng cho ảnh */
+}
+
+.producttitle {
+    height: 100px;
+    text-align: center;
+    justify-items: center;
+
+    p {
+        font-size: 35px;
+        font-weight: bold;
+
+        @media (max-width: 768px) {
+            font-size: 28px; /* Giảm kích thước chữ cho màn hình nhỏ */
+        }
+    }
+}

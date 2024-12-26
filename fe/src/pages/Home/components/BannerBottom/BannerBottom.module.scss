@@ -1,0 +1,41 @@
+@import "../../../../Styles/variables.scss";
+.bannerBottom {
+    position: relative;
+    margin-top: 30px;
+    .bannerBottomImage {
+        height: 614px;
+        width: 100%;
+        opacity: 0.9;
+        object-fit: cover;
+    }
+    .bannerBottomContent {
+        position: absolute;
+        left: 30%;
+        top: 25%;
+        transform: translate(-50%, -50%);
+        @media (max-width: 1124px) {
+            left: 50%;
+            top: 20%;
+            margin: 0 auto !important;
+        }
+        h2 {
+            font-size: 50px;
+            margin-top: 300px;
+            margin-bottom: 35px;
+            font-weight: 700;
+            color: #6e594b;
+        }
+        p {
+            color: #2e2a2a;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .bannerBottomButton {
+            color: rgb(255, 255, 255);
+            border-color: #fff;
+            background-color: $bg-button-color;
+            font-weight: 500;
+            margin-top: 30px;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.XemTatCa {
+    width: 160px;
+    height: 40px;
+    background-color: brown;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    display: flex; /* Để đảm bảo nút nằm giữa */
+    justify-content: center; /* Căn giữa nội dung trong khối */
+    align-items: center; /* Căn giữa theo chiều dọc */
+
+    .ButtonXem {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.375);
+        }
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .XemTatCa {
+        width: 140px; /* Giảm chiều rộng trên màn hình nhỏ hơn */
+        height: 35px; /* Giảm chiều cao trên màn hình nhỏ hơn */
+    }
+}
+
+@media (max-width: 480px) {
+    .XemTatCa {
+        width: 120px; /* Giảm chiều rộng hơn nữa trên màn hình rất nhỏ */
+        height: 30px; /* Giảm chiều cao hơn nữa */
+    }
+}

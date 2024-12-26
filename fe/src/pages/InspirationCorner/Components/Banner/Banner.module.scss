@@ -1,0 +1,240 @@
+.imageGallery {
+    display: flex;
+    width: 100%;
+    height: 700px; /* Chiều cao mặc định */
+    justify-content: space-between;
+    margin-top: 40px;
+
+    @media (max-width: 640px) {
+        flex-direction: column; /* Chuyển đổi sang dạng cột cho màn hình nhỏ */
+        height: auto; /* Chiều cao tự động cho màn hình nhỏ */
+    }
+}
+
+.mainImageContainers {
+    position: relative;
+    width: 71.43%; /* 5/7 width */
+    height: 100%;
+    overflow: hidden;
+    padding: 20px 10px 10px 40px;
+
+    @media (max-width: 640px) {
+        width: 100%; /* Chiếm toàn bộ chiều ngang cho màn hình nhỏ */
+        padding: 10px; /* Giảm padding cho màn hình nhỏ */
+        height: auto; /* Chiều cao tự động */
+    }
+
+    .mainImageContainer {
+        height: 100%;
+        overflow: hidden;
+
+        .mainImage {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+
+            &:hover {
+                transform: scale(1.10); /* Phóng to một chút khi hover */
+                filter: brightness(1.2); /* Làm sáng hơn một chút khi hover */
+            }
+        }
+    }
+
+    .overlay {
+        position: absolute;
+        top: 40%;
+        left: 10%;
+        color: white;
+        text-align: left;
+
+        @media (max-width: 640px) {
+            top: 20%; /* Điều chỉnh vị trí overlay cho màn hình nhỏ */
+            left: 5%; /* Giảm khoảng cách bên trái */
+            text-align: center; /* Căn giữa văn bản cho màn hình nhỏ */
+        }
+
+        .smallText {
+            font-size: 1.2rem; /* Kích thước chữ nhỏ */
+            font-style: italic;
+
+            @media (max-width: 640px) {
+                font-size: 1rem; /* Giảm kích thước chữ cho màn hình nhỏ */
+            }
+        }
+
+        h1 {
+            width: 400px; /* Chiều rộng cố định */
+            font-size: 3.2rem; /* Kích thước chữ */
+            margin-top: 20px;
+            line-height: 1.2;
+
+            @media (max-width: 640px) {
+                width: auto; /* Chiều rộng tự động cho màn hình nhỏ */
+                font-size: 2rem; /* Giảm kích thước chữ cho màn hình nhỏ */
+            }
+        }
+
+        .overlayButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.375);
+            }
+
+            @media (max-width: 640px) {
+                padding: 8px 16px; /* Giảm padding cho nút trên màn hình nhỏ */
+            }
+        }
+    }
+}
+
+.sideImages {
+    width: 28.57%; /* 2/7 width */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 40px 0px 10px;
+
+    @media (max-width: 640px) {
+        width: 100%; /* Chiếm toàn bộ chiều ngang cho màn hình nhỏ */
+        padding: 10px; /* Giảm padding cho màn hình nhỏ */
+        margin-top: 20px; /* Thêm khoảng cách trên */
+        flex-direction: row; /* Đặt các ảnh nhỏ trong một hàng */
+    }
+
+    .sideImageContainer {
+        height: 48%; /* Mỗi ảnh con chiếm 48% chiều cao */
+        overflow: hidden;
+        margin-bottom: 10px; /* Khoảng cách giữa các ảnh nhỏ */
+
+        @media (max-width: 640px) {
+            width: 48%; /* Mỗi ảnh nhỏ chiếm 48% chiều ngang */
+            height: auto; /* Tự điều chỉnh chiều cao */
+            margin-bottom: 0; /* Bỏ khoảng cách khi chuyển sang hàng ngang */
+        }
+
+        .sideImage {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+
+            &:hover {
+                transform: scale(1.15); /* Phóng to một chút khi hover */
+                filter: brightness(0.9);
+            }
+        }
+    }
+}
+
+/* Tỉ lệ thay đổi chiều cao và kích thước chữ khi màn hình thu nhỏ */
+@media (max-width: 1300px) {
+    .imageGallery {
+        height: 660px; /* Giảm chiều cao */
+    }
+
+    .overlay h1 {
+        font-size: 3rem !important; /* Giảm cỡ chữ */
+    }
+
+    .overlayButton {
+        padding: 9px 18px !important; /* Giảm padding button */
+    }
+}
+
+@media (max-width: 1200px) {
+    .imageGallery {
+        height: 620px; /* Giảm chiều cao */
+    }
+
+    .overlay h1 {
+        font-size: 2.8rem !important; /* Giảm cỡ chữ */
+    }
+
+    .overlayButton {
+        padding: 8px 16px !important; /* Giảm padding button */
+    }
+}
+
+@media (max-width: 1100px) {
+    .imageGallery {
+        height: 580px; /* Giảm chiều cao */
+    }
+
+    .overlay h1 {
+        font-size: 2.6rem !important; /* Giảm cỡ chữ */
+    }
+
+    .overlayButton {
+        padding: 8px 16px !important; /* Giảm padding button */
+    }
+}
+
+@media (max-width: 1000px) {
+    .imageGallery {
+        height: 540px; /* Giảm chiều cao */
+    }
+
+    .overlay h1 {
+        font-size: 2.4rem !important; /* Giảm cỡ chữ */
+    }
+
+    .overlayButton {
+        padding: 7px 14px !important; /* Giảm padding button */
+    }
+}
+
+@media (max-width: 900px) {
+    .imageGallery {
+        height: 500px; /* Giảm thêm chiều cao */
+    }
+
+    .overlay h1 {
+        font-size: 2.2rem !important; /* Giảm cỡ chữ */
+    }
+
+    .overlayButton {
+        padding: 7px 14px !important; /* Giảm padding button */
+    }
+}
+
+@media (max-width: 800px) {
+    .imageGallery {
+        height: 460px; /* Giảm thêm chiều cao */
+    }
+
+    .overlay h1 {
+        font-size: 2rem !important; /* Giảm cỡ chữ */
+    }
+
+    .overlayButton {
+        padding: 6px 12px !important; /* Giảm padding button */
+    }
+}
+
+@media (max-width: 700px) {
+    .imageGallery {
+        height: 400px; /* Giảm thêm chiều cao */
+    }
+
+    .overlay h1 {
+        font-size: 1.8rem !important; /* Giảm cỡ chữ */
+    }
+
+    .overlayButton {
+        padding: 6px 12px !important; /* Giảm padding button */
+    }
+}
+
+@media (max-width: 640px) {
+    .imageGallery {
+        height: auto; /* Khi đạt đến 600px, chiều cao tự động điều chỉnh */
+    }
+}
